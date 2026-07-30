@@ -15,7 +15,7 @@ This repository implements **Physics-Informed Neural Networks (PINNs)** to solve
 * **Alena Lara Weber**
 * **Omar Abdesslem**
 
-*Collaborative project across RWTH Aachen University, CAMINOS ETH, UPV, and GUT.*
+*Collaborative project across RWTH Aachen University, CAMINOS UPV, ETH Zürich, and GUT.*
 
 ---
 
