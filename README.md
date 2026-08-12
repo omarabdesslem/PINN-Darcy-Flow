@@ -35,6 +35,7 @@ Groundwater flow beneath hydraulic structures like concrete gravity dams is gove
 * **Effective Stresses & Bearing Capacity**: Water pressure directly impacts effective stress $\sigma' = \sigma - u$, where pore pressure $u = (h - z)\gamma_w$.
 * **Erosion & Piping Risk**: High exiting hydraulic gradients can reach critical threshold values $i_{crit} = \frac{\gamma_{sub}}{\gamma_w}$, triggering internal piping erosion beneath the structure.
 
+![Overview Example](figs/dam_fig.png)
 ---
 
 ##  1: Non-Dimensionalization & Domain Setup
