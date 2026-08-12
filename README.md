@@ -73,33 +73,14 @@ $$\frac{\partial^2 H}{\partial \hat{x}^2} + \frac{\partial^2 H}{\partial \hat{y}
 ##  2: Forward PINN Model
 
 The forward model trains a neural network $H_{\theta}(\hat{x}, \hat{y})$ to estimate the spatial hydraulic pressure head distribution purely driven by physics constraints, requiring no pre-existing mesh simulation data during training.
-          Input (x, y)
-               │
-               ▼
-    ┌─────────────────────────┐
-    │ Fully Connected Network │
-    │   [2] → [25] × 6 → [1] │
-    └─────────────────────────┘
-               │
-               ▼
-   Predicted Hydraulic Head (h)
-               │
-        ┌──────┴──────┐
-        │             │
-        ▼             ▼
-    PDE Loss      Boundary Losses
-     Δh = 0      Dirichlet + Neumann
-        │             │
-        └──────┬──────┘
-               │
-               ▼
-      Total Adaptive Loss
+<div align="center">
 
-The network consists of:
+<table> <tr> <td align="center"><b>Input</b><br><code>(x, y)</code></td> </tr> <tr> <td align="center">↓</td> </tr> <tr> <td align="center"> <b>Fully Connected Neural Network</b><br> <code>[2] → [25] × 6 → [1]</code> </td> </tr> <tr> <td align="center">↓</td> </tr> <tr> <td align="center"> <b>Predicted Hydraulic Head</b><br> <code>h</code> </td> </tr> </table>
 
-2 inputs: spatial coordinates (x, y)
-6 hidden layers: 25 neurons per layer
-1 output: predicted hydraulic head h
+<table> <tr> <td align="center"> <b>PDE Loss</b><br> <code>Δh = 0</code> </td> <td align="center"> <b>Boundary Losses</b><br> Dirichlet + Neumann </td> </tr> <tr> <td align="center">↘</td> <td align="center">↙</td> </tr> <tr> <td colspan="2" align="center"> <b>Total Adaptive Loss</b> </td> </tr> </table>
+
+</div>
+
 
 ### Network Architecture & Loss Function
 * **Architecture**: Deep Fully-Connected Neural Network with 6 hidden layers, each having 25 neurons ($[2] \to [25] \times 6 \to [1]$).
