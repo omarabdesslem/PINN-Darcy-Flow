@@ -109,7 +109,7 @@ Total Adaptive Loss
 
 ---
 
-![Task_2_Result](figs/figs/Task_2_Result.png)
+![Task_2_Result](figs/Task_2_Result.png)
 
 
 ##  3: Inverse PINN Model (Permeability Estimation)
@@ -130,7 +130,7 @@ The inverse PINN model estimates the hidden material parameter—hydraulic condu
 ### Training Mechanics
 To accelerate joint optimization, the model loads pre-trained weights from  2 as an initial starting point (warm-start strategy) and updates head parameters $\theta$ and parameter $k$ simultaneously via Adam optimization.
 
-![Task_3_Result](figs/figs/Task_3_result.png)
+![Task_3_Result](figs/Task_3_result.png)
 
 ---
 
