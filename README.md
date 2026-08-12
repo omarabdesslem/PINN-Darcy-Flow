@@ -114,11 +114,12 @@ The inverse PINN model estimates the hidden material parameter—hydraulic condu
 * **Joint Optimization Objective**:
   $$L_{inverse} = L_{PDE} + \lambda_D L_D + \lambda_N L_N + \lambda_v L_v$$
   *A higher weight ($\lambda_v = 100$) strongly aligns predicted flow velocity with physical observations.*
+  
+![Task_3_Result](figs/Task_3_result.png)
 
 ### Training Mechanics
 To accelerate joint optimization, the model loads pre-trained weights from  2 as an initial starting point (warm-start strategy) and updates head parameters $\theta$ and parameter $k$ simultaneously via Adam optimization.
 
-![Task_3_Result](figs/Task_3_result.png)
 
 ---
 
