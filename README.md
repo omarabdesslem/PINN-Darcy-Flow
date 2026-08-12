@@ -56,6 +56,8 @@ We introduce characteristic domain length $L$ alongside upstream ($h_1$) and dow
 
 This yields the dimensionless governing equation:
 $$\frac{\partial^2 H}{\partial \hat{x}^2} + \frac{\partial^2 H}{\partial \hat{y}^2} = 0$$
+![Dimentionless Flow](figs/Dimentionless_Flow.png)
+
 
 ### Boundary Conditions
 
@@ -91,6 +93,7 @@ PDE Loss (Δh=0)    BC Losses (Dirichlet & Neumann)
 ▼
 Total Adaptive Loss
 
+
 ### Network Architecture & Loss Function
 * **Architecture**: Deep Fully-Connected Neural Network with 6 hidden layers, each having 25 neurons ($[2] \to [25] \times 6 \to [1]$).
 * **Total Loss Function**:
@@ -105,6 +108,9 @@ Total Adaptive Loss
    * **Accuracy Achieved**: Absolute error metric accuracy $> 91.9\%$ compared against reference Finite Element Method (FEM) solutions.
 
 ---
+
+![Task_2_Result](figs/figs/Task_2_Result.png)
+
 
 ##  3: Inverse PINN Model (Permeability Estimation)
 
@@ -123,6 +129,8 @@ The inverse PINN model estimates the hidden material parameter—hydraulic condu
 
 ### Training Mechanics
 To accelerate joint optimization, the model loads pre-trained weights from  2 as an initial starting point (warm-start strategy) and updates head parameters $\theta$ and parameter $k$ simultaneously via Adam optimization.
+
+![Task_3_Result](figs/figs/Task_3_result.png)
 
 ---
 
